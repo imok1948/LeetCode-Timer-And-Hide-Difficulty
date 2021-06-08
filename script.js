@@ -1,16 +1,18 @@
 setTimeout(function() {
     try {
-
-        //table = document.querySelector("#app > div > div > div > div.table-responsive > table > tbody");
         table = document.getElementsByClassName('reactable-data')[0];
         rows = table.getElementsByTagName('tr');
 
         for (i = 0; i < rows.length; i++) {
-            //     document.querySelector(`#app > div > div > div > div.table-responsive > table > tbody > tr:nth-child(${i + 1}) > td:nth-child(4)`).innerHTML = ''
-            //     document.querySelector(`#app > div > div > div > div.table-responsive > table > tbody > tr:nth-child(${i + 1}) > td:nth-child(5)`).innerHTML = '';
-            rows[i].querySelector('td:nth-child(5)').innerHTML = 'Hidden';
-            rows[i].querySelector('td:nth-child(6)').innerHTML = 'Hidden';
+            tds = rows[i].getElementsByTagName('td');
+            for (j = 0; j < tds.length; j++) {
+                label = tds[j].getAttribute('label');
+                if (label == 'Acceptance' || label == 'Difficulty') {
+                    tds[j].innerHTML = 'Hidden';
+                }
+            }
         }
+
     } catch (err) {
         console.log("Error while hiding difficulties");
     }
