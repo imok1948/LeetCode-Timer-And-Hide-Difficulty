@@ -19,7 +19,7 @@ setTimeout(function() {
 
     try {
 
-        k = document.getElementsByClassName('ant-table-row ant-table-row-level-0 even:bg-overlay-3 dark:even:bg-dark-overlay-1 odd:bg-overlay-1 dark:odd:bg-dark-overlay-3');
+        k = document.getElementsByClassName('ant-table-row');
         for (i = 0; i < k.length; i++) {
             columns = k[i].getElementsByClassName('ant-table-cell ant-table-cell-ellipsis');
             for (j = 0; j < 3; j++) {
