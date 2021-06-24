@@ -62,7 +62,9 @@ setTimeout(function() {
 
             time += (seconds == 0) ? '' : (seconds < 10 ? '0' + seconds : seconds);
 
-            div.innerText = time;
+            if (div != null && div.innerText != null) {
+                div.innerText = time;
+            }
         }
 
         leetCodeTimer = setInterval(addSeconds, 1000);
