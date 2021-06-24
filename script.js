@@ -1,16 +1,29 @@
 setTimeout(function() {
 
-    try {
-        table = document.getElementsByClassName('reactable-data')[0];
-        rows = table.getElementsByTagName('tr');
+    //     try {
+    //         table = document.getElementsByClassName('reactable-data')[0];
+    //         rows = table.getElementsByTagName('tr');
 
-        for (i = 0; i < rows.length; i++) {
-            tds = rows[i].getElementsByTagName('td');
-            for (j = 0; j < tds.length; j++) {
-                label = tds[j].getAttribute('label');
-                if (label == 'Acceptance' || label == 'Difficulty') {
-                    tds[j].innerHTML = 'Hidden';
-                }
+    //         for (i = 0; i < rows.length; i++) {
+    //             tds = rows[i].getElementsByTagName('td');
+    //             for (j = 0; j < tds.length; j++) {
+    //                 label = tds[j].getAttribute('label');
+    //                 if (label == 'Acceptance' || label == 'Difficulty') {
+    //                     tds[j].innerHTML = 'Hidden';
+    //                 }
+    //             }
+    //         }
+    //     } catch (err) {
+    //         console.log('Error while hiding acceptance rate')
+    //     }
+
+    try {
+
+        k = document.getElementsByClassName('ant-table-row ant-table-row-level-0 even:bg-overlay-3 dark:even:bg-dark-overlay-1 odd:bg-overlay-1 dark:odd:bg-dark-overlay-3');
+        for (i = 0; i < k.length; i++) {
+            columns = k[i].getElementsByClassName('ant-table-cell ant-table-cell-ellipsis');
+            for (j = 0; j < 3; j++) {
+                columns[columns.length - j - 1].innerHTML = 'Hidden';
             }
         }
     } catch (err) {
