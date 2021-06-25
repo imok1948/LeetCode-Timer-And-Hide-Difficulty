@@ -1,21 +1,21 @@
 setTimeout(function() {
 
-    //     try {
-    //         table = document.getElementsByClassName('reactable-data')[0];
-    //         rows = table.getElementsByTagName('tr');
+        try {
+            table = document.getElementsByClassName('reactable-data')[0];
+            rows = table.getElementsByTagName('tr');
 
-    //         for (i = 0; i < rows.length; i++) {
-    //             tds = rows[i].getElementsByTagName('td');
-    //             for (j = 0; j < tds.length; j++) {
-    //                 label = tds[j].getAttribute('label');
-    //                 if (label == 'Acceptance' || label == 'Difficulty') {
-    //                     tds[j].innerHTML = 'Hidden';
-    //                 }
-    //             }
-    //         }
-    //     } catch (err) {
-    //         console.log('Error while hiding acceptance rate')
-    //     }
+            for (i = 0; i < rows.length; i++) {
+                tds = rows[i].getElementsByTagName('td');
+                for (j = 0; j < tds.length; j++) {
+                    label = tds[j].getAttribute('label');
+                    if (label == 'Acceptance' || label == 'Difficulty') {
+                        tds[j].innerHTML = 'Hidden';
+                    }
+                }
+            }
+        } catch (err) {
+            console.log('Error while hiding acceptance rate')
+        }
 
     try {
 
